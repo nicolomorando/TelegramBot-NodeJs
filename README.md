@@ -6,7 +6,7 @@
 - Author: Morando Nicolò
 - Release data: 01/02/2018
 - Framework, api used: "sentiment", "express" and "node-telegram-bot-api"
-- actually avaible commands: /start, /author and /vmintelligence
+- actually available commands: /start, /author and /vmintelligence
 
 To install node.js in your folder (Run on CMD):
 
