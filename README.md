@@ -35,7 +35,7 @@ npm install sentiment --save
 ```
 everything must be installed in the folder you created!
 
-### Docker
+### Test
 To test.
 start a conversation with my bot (FactInside): [t.me/factinsidebot](http://t.me/factinsidebot)
 
