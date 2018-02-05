@@ -7,14 +7,15 @@ var api = new telegramBot(token, {polling: true});
 
 api.onText(/\/author/, function(msg, match) {
   var fromId = msg.from.id;
-  api.sendMessage(fromId, "Il mio sviluppatore si chiama: Morando Nicolò.\nAttualmente sono ancora in fase di sviluppo, tuttavia rimani aggiornato!\nVersione:1.1, Author Website: http://www.fuckjupp.com/");
+  api.sendMessage(fromId, "Il mio sviluppatore si chiama: Morando Nicolò.\nAttualmente sono ancora in fase di sviluppo, è stata aggiornata la versione ed ora posso risponderti dantoti le mie impressioni, tuttavia rimani aggiornato!\nVersione:1.2, Author Website: http://www.fuckjupp.com/");
 });
 
 api.onText(/\/start/, function(msg, match) {
   var fromId = msg.from.id;
   api.sendMessage(fromId, "Ciao! Io sono Fact Inside the bot!" + 
                           "\nAttualmente sono in fase di sviluppo, però sono già disponibili vari tools. "+
-                          "\nCome ad esempio:\n/start\n/author\n/vmintelligence");
+                          "\nCome ad esempio:\n/author\n/vmintelligence" +
+						  "\nPer rivisualizzare il messaggio inserire il comando:\n/start" );
 });
 
 var opts = {
