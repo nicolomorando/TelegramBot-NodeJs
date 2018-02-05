@@ -31,9 +31,15 @@ api.onText(/\/vmintelligence/, function(msg, match) {
     var chatId = sended.chat.id;
     var messageId = sended.message_id;
     api.onReplyToMessage(chatId, messageId, function (message) {
-      var sentival = sentiment(message.text);
-      api.sendMessage(fromId,"Le mie opinioni a riguardo sono:\n(da 0 in su: positive)(da 0 in giù: negative)\nOpinione: " + sentival.score +", Valore: "+sentival.comparative);
-    });
+      var sentival = sentiment(message.text)
+	  if (sentival.score < 0) {
+		api.sendMessage(fromId, "Perchè sei così pessimista, questa frase è troppo negativa! non sono d'accordo!");
+	  } else if (sentival.score > 0) {
+		api.sendMessage(fromId, "Ottima frase! Vedo che sei di ottimo umore!");
+	  } else {
+		api.sendMessage(fromId, "Frase neutra, nulla da dire a riguardo.");
+	  }
+	  });
   });                          
                           
 });
