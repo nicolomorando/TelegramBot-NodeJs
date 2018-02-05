@@ -39,6 +39,7 @@ everything must be installed in the folder you created!
 05/02/2k18:
 ```sh
 Updated the impressions of the bot, removed the score tipology and added the strings impression.
+Added hosting user tracker.
 ```
 
   
