@@ -35,6 +35,10 @@ npm install sentiment --save
 ```
 everything must be installed in the folder you created!
 
+### Updates
+05/02/2k18:
+  -Updated the impressions of the bot, removed the score tipology and added the strings impression.
+  
 ### Test
 To test.
 start a conversation with my bot (FactInside): [t.me/factinsidebot](http://t.me/factinsidebot)
