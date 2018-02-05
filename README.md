@@ -17,6 +17,12 @@ cd your folder
 npm init
 ```
 
+To install username (Run on CMD):
+
+```sh
+npm install username --save
+```
+
 To install express (Run on CMD):
 
 ```sh
