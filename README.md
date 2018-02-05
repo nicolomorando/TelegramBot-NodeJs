@@ -2,7 +2,7 @@
 
 [![N|Solid](http://www.zabius.com/images/node_zabius.png)](https://nodejs.org/it/)
 
-- Version: 1.1
+- Version: 1.2
 - Author: Morando Nicolò
 - Release data: 01/02/2018
 - Framework, api used: "sentiment", "express" and "node-telegram-bot-api"
