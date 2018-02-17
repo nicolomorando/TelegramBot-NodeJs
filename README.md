@@ -2,10 +2,10 @@
 
 [![N|Solid](http://www.zabius.com/images/node_zabius.png)](https://nodejs.org/it/)
 
-- Version: 1.3
+- Version: 1.4
 - Author: Morando Nicolò
 - Release data: 01/02/2018
-- Recent update data: 05/02/2018
+- Recent update data: 17/02/2018
 - Framework, api used: "sentiment", "express", username and "node-telegram-bot-api"
 - actually available commands: /start, /author and /vmintelligence
 
@@ -48,7 +48,11 @@ everything must be installed in the folder you created!
 Updated the impressions of the bot, removed the score tipology and added the strings impression.
 Added hosting user tracker.
 ```
-
+17/02/2k18:
+```sh
+Added the "Login Form", without backend.
+TODO: complete with database, registration and possible login.
+```
   
 ### Test
 To test.
