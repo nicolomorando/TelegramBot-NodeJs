@@ -1,4 +1,4 @@
-# Telegram Bot, using Node.js and "sentiment" library.
+# Telegram Bot, using Node.js.
 
 [![N|Solid](http://www.zabius.com/images/node_zabius.png)](https://nodejs.org/it/)
 
