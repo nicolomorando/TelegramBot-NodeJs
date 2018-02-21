@@ -19,7 +19,7 @@ var api = new telegramBot(token, {polling: true});
 // bot information
 api.onText(/\/info/, function(msg, match) {
   var fromId = msg.from.id;
-  api.sendMessage(fromId, "<b>Informazioni Bot</b> \n <i>FactInsideBot</i> \n <a href=\"https://github.com/JuppiJ/TelegramBot-NodeJs\">Github Repo.</a> \n <code>Version 1.4, release data: 01/02/2018, last update data: 17/02/2018</code>" ,{parse_mode : "HTML"});
+  api.sendMessage(fromId, "<b>Informazioni Bot</b> \n <i>FactInsideBot</i> \n <a href=\"https://github.com/JuppiJ/TelegramBot-NodeJs\">Github Repo.</a> \n <code>Version 1.5, release data: 01/02/2018, last update data: 21/02/2018</code>" ,{parse_mode : "HTML"});
 });
 // info
 
@@ -27,15 +27,17 @@ api.onText(/\/info/, function(msg, match) {
 // author tool startup
 api.onText(/\/author/, function(msg, match) {
   var fromId = msg.from.id;
-  api.sendMessage(fromId, "Il mio sviluppatore si chiama: Morando Nicolò.\nAttualmente sono ancora in fase di sviluppo" + 
-						  ", ma è stata aggiornata la versione ed ora posso risponderti dandoti le mie impressioni, " +
-						  "tuttavia rimani aggiornato!\nVersione: 1.3, hostato sulla WStation dell'utente: '" + username.sync() + "',\nAuthor Website: http://www.fuckjupp.com/");
+  api.sendMessage(fromId, "<b>Informazioni Sviluppatore</b> \n <i>Nicolò Morando</i> \n <a href=\"http://www.fuckjupp.com/\">Website.</a> \n <code>Rimani aggiornato per ulteriori versioni.</code>" ,{parse_mode : "HTML"});
 });
 // author tool end.
 
 
 // startup bot
 api.onText(/\/start/, function(msg, match) {
+  var fromId = msg.from.id;
+  api.sendMessage(fromId, "<b>Introduzione</b> \n <i>Fact Inside Bot</i> \n" + "Ciao! Io sono Fact Inside the bot!"
+,{parse_mode : "HTML"});
+});
   var fromId = msg.from.id;
   api.sendMessage(fromId, "Ciao! Io sono Fact Inside the bot!" + 
                           "\nAttualmente sono in fase di sviluppo, però sono già disponibili vari tools. "+
