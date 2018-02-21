@@ -2,12 +2,12 @@
 
 [![N|Solid](http://www.zabius.com/images/node_zabius.png)](https://nodejs.org/it/)
 
-- Version: 1.4
+- Version: 1.5
 - Author: Morando Nicolò
 - Release data: 01/02/2018
-- Recent update data: 17/02/2018
+- Recent update data: 21/02/2018
 - Framework, api used: "sentiment", "express", username and "node-telegram-bot-api"
-- actually available commands: /start, /author and /vmintelligence
+- actually available commands: /start, /author, /vmintelligence and /info
 
 To install node.js in your folder (Run on CMD):
 
@@ -52,6 +52,11 @@ Added hosting user tracker.
 ```sh
 Added the "Login Form", without backend.
 TODO: complete with database, registration and possible login.
+```
+21/02/2k18:
+```sh
+Added the "/info" section.
+it drops the bot information.
 ```
   
 ### Test
