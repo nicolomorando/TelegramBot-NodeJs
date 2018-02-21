@@ -56,7 +56,7 @@ TODO: complete with database, registration and possible login.
 21/02/2k18:
 ```sh
 Added the "/info" section.
-it drops the bot information.
+it drops the bot informations.
 ```
   
 ### Test
