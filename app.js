@@ -9,11 +9,19 @@ username().then(username => {
 });
 //.
 
+var permission = ['USERadmin001'];
 
 var token ='499098435:AAEdqTCTBAsx6-QqY3msQak-2t5azJYCEUU';
 
 var api = new telegramBot(token, {polling: true});
 
+
+// bot information
+api.onText(/\/info/, function(msg, match) {
+  var fromId = msg.from.id;
+  api.sendMessage(fromId, "<b>Informazioni Bot</b> \n <i>FactInsideBot</i> \n <a href=\"https://github.com/JuppiJ/TelegramBot-NodeJs\">Github Repo.</a> \n <code>Version 1.4, release data: 01/02/2018, last update data: 17/02/2018</code>" ,{parse_mode : "HTML"});
+});
+// info
 
 
 // author tool startup
@@ -25,12 +33,13 @@ api.onText(/\/author/, function(msg, match) {
 });
 // author tool end.
 
+
 // startup bot
 api.onText(/\/start/, function(msg, match) {
   var fromId = msg.from.id;
   api.sendMessage(fromId, "Ciao! Io sono Fact Inside the bot!" + 
                           "\nAttualmente sono in fase di sviluppo, però sono già disponibili vari tools. "+
-                          "\nCome ad esempio:\n/author\n/vmintelligence" +
+                          "\nCome ad esempio:\n/author\n/vmintelligence\n/info" +
 						  "\nPer rivisualizzare il messaggio inserire il comando:\n/start" );
 });
 // startup bot end.
@@ -66,6 +75,5 @@ api.onText(/\/vmintelligence/, function(msg, match) {
 // intelligence startup end.  
                           
 });
-
 
 console.log("bot run. Start conversations in your Telegram.");
