@@ -35,14 +35,9 @@ api.onText(/\/author/, function(msg, match) {
 // startup bot
 api.onText(/\/start/, function(msg, match) {
   var fromId = msg.from.id;
-  api.sendMessage(fromId, "<b>Introduzione</b> \n <i>Fact Inside Bot</i> \n" + "Ciao! Io sono Fact Inside the bot!"
-,{parse_mode : "HTML"});
-});
-  var fromId = msg.from.id;
-  api.sendMessage(fromId, "Ciao! Io sono Fact Inside the bot!" + 
-                          "\nAttualmente sono in fase di sviluppo, però sono già disponibili vari tools. "+
-                          "\nCome ad esempio:\n/author\n/vmintelligence\n/info" +
-						  "\nPer rivisualizzare il messaggio inserire il comando:\n/start" );
+  api.sendMessage(fromId, "<b>Introduzione</b> \n <i>Fact Inside Bot</i>" +
+                          "\nComandi Disponibili:\n/author\n/vmintelligence\n/info" +
+						  "\nPer rivisualizzare il messaggio:\n/start",{parse_mode : "HTML"});
 });
 // startup bot end.
 
@@ -58,19 +53,18 @@ var opts = {
 // intelligence startup
 api.onText(/\/vmintelligence/, function(msg, match) {
   var fromId = msg.from.id;  
-  api.sendMessage(fromId, "vmintelligence capisce la sintassi della tua frase in modo che io possa darti un'opinione da me relizzata e concreta."
-						+ "\nScrivimi qualcosa (In inglese) così che io possa darti le mie opinioni.", opts)
+  api.sendMessage(fromId, "\nScrivimi qualcosa (In inglese) così che io possa darti le mie opinioni.", opts)
   .then(function (sended) {
     var chatId = sended.chat.id;
     var messageId = sended.message_id;
     api.onReplyToMessage(chatId, messageId, function (message) {
       var sentival = sentiment(message.text)
 	  if (sentival.score < 0) {
-		api.sendMessage(fromId, "Perchè sei così pessimista, questa frase è troppo negativa! non sono d'accordo!");
+		api.sendMessage(fromId, "Frase negativa.");
 	  } else if (sentival.score > 0) {
-		api.sendMessage(fromId, "Ottima frase! Vedo che sei di ottimo umore!");
+		api.sendMessage(fromId, "Frase positiva.");
 	  } else {
-		api.sendMessage(fromId, "Frase neutra, nulla da dire a riguardo.");
+		api.sendMessage(fromId, "Frase neutrale.");
 	  }
 	  });
   });    
