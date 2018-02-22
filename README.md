@@ -58,6 +58,7 @@ TODO: complete with database, registration and possible login.
 Added the "/info" section.
 it drops the bot informations.
 and updated all sections.
+removed hosting tracker.
 ```
   
 ### Test
