@@ -19,7 +19,7 @@ var api = new telegramBot(token, {polling: true});
 // bot information
 api.onText(/\/info/, function(msg, match) {
   var fromId = msg.from.id;
-  api.sendMessage(fromId, "<b>Informazioni Bot</b> \n <i>FactInsideBot</i> \n <a href=\"https://github.com/JuppiJ/TelegramBot-NodeJs\">Github Repo.</a> \n <code>Version 1.5, release data: 01/02/2018, last update data: 21/02/2018</code>" ,{parse_mode : "HTML"});
+  api.sendMessage(fromId, "<b>Informazioni Bot</b> \n <i>FactInsideBot</i> \n <code>Version 1.5, release data: 01/02/2018, last update data: 21/02/2018</code> \n  <a href=\"https://github.com/JuppiJ/TelegramBot-NodeJs\">Github Repo.</a> " ,{parse_mode : "HTML"});
 });
 // info
 
