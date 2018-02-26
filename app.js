@@ -16,10 +16,21 @@ var token ='499098435:AAEdqTCTBAsx6-QqY3msQak-2t5azJYCEUU';
 var api = new telegramBot(token, {polling: true});
 
 
+api.onText(/\/location/, function(msg, match) {
+	var fromId = msg.from.id;
+	api.sendLocation(fromId,16.7713834, -3.0167342);
+});
+
+
+api.onText(/\/image/, function(msg, match) {
+	var fromId = msg.from.id;
+	api.sendPhoto(fromId,"./images.png"); 
+});
+
 // bot information
 api.onText(/\/info/, function(msg, match) {
   var fromId = msg.from.id;
-  api.sendMessage(fromId, "<b>Informazioni Bot</b> \n <i>FactInsideBot</i> \n <code>Version 1.5, release data: 01/02/2018, last update data: 21/02/2018</code> \n  <a href=\"https://github.com/JuppiJ/TelegramBot-NodeJs\">Github Repo.</a> " ,{parse_mode : "HTML"});
+  api.sendMessage(fromId, "<b>Informazioni Bot</b> \n <i>FactInsideBot</i> \n \n <code>Version 1.5, release data: 01/02/2018, last update data: 21/02/2018</code> \n  <a href=\"https://github.com/JuppiJ/TelegramBot-NodeJs\">Github Repo.</a> " ,{parse_mode : "HTML"});
 });
 // info
 
@@ -27,7 +38,7 @@ api.onText(/\/info/, function(msg, match) {
 // author tool startup
 api.onText(/\/author/, function(msg, match) {
   var fromId = msg.from.id;
-  api.sendMessage(fromId, "<b>Informazioni Sviluppatore</b> \n <i>Nicolò Morando</i> \n <a href=\"http://www.fuckjupp.com/\">Website.</a> \n <code>Rimani aggiornato per ulteriori versioni.</code>" ,{parse_mode : "HTML"});
+  api.sendMessage(fromId, "<b>Informazioni Sviluppatore</b> \n <i>Nicolò Morando</i> \n \n <a href=\"http://www.fuckjupp.com/\">Website.</a> \n <code>Rimani aggiornato per ulteriori versioni.</code>" ,{parse_mode : "HTML"});
 });
 // author tool end.
 
@@ -36,7 +47,7 @@ api.onText(/\/author/, function(msg, match) {
 api.onText(/\/start/, function(msg, match) {
   var fromId = msg.from.id;
   api.sendMessage(fromId, "<b>Introduzione</b> \n <i>Fact Inside Bot</i>" +
-                          "\nComandi Disponibili:\n/author\n/vmintelligence\n/info" +
+                          "\n \n Comandi Disponibili:\n/author\n/vmintelligence\n/info" +
 						  "\nPer rivisualizzare il messaggio:\n/start",{parse_mode : "HTML"});
 });
 // startup bot end.
