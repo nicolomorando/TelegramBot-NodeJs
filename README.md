@@ -62,7 +62,7 @@ removed hosting tracker.
 ```
 26/02/2k18:
 ```sh
-Added sections: /location and /image.
+Added sections: "/location" and "/image".
 ```
   
 ### Test
