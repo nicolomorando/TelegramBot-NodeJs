@@ -5,7 +5,7 @@
 - Version: 1.6
 - Author: Morando Nicolò
 - Release data: 01/02/2018
-- Recent update data: 21/02/2018
+- Recent update data: 26/02/2018
 - Framework, api used: "sentiment", "express" and "node-telegram-bot-api"
 - actually available commands: /start, /author, /vmintelligence, /info, /location, image.
 
