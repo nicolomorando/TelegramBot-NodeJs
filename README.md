@@ -2,12 +2,12 @@
 
 [![N|Solid](http://www.zabius.com/images/node_zabius.png)](https://nodejs.org/it/)
 
-- Version: 1.5
+- Version: 1.6
 - Author: Morando Nicolò
 - Release data: 01/02/2018
 - Recent update data: 21/02/2018
 - Framework, api used: "sentiment", "express" and "node-telegram-bot-api"
-- actually available commands: /start, /author, /vmintelligence and /info
+- actually available commands: /start, /author, /vmintelligence, /info, /location, image.
 
 To install node.js in your folder (Run on CMD):
 
@@ -59,6 +59,10 @@ Added the "/info" section.
 it drops the bot informations.
 and updated all sections.
 removed hosting tracker.
+```
+26/02/2k18:
+```sh
+Added sections: /location and /image.
 ```
   
 ### Test
